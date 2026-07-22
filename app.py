@@ -16,7 +16,7 @@ st.set_page_config(
 # Load Image
 # ------------------------------------
 image = Image.open(
-    r"C:\Users\divya\OneDrive\Documents\Todaysss\Image\Walmart.png"
+    r"C:\Users\divya\OneDrive\Documents\Walmart Sales And Inventory Analysis Dashboard\Image"
 )
 
 # ------------------------------------

@@ -56,7 +56,7 @@ def home():
 st.sidebar.title("🛒 Walmart Dashboard")
 
 page = st.sidebar.radio(
-    ,
+    
     [
         "🏠 Home",
         "📊 Sales Analysis",

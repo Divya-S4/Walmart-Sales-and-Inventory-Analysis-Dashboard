@@ -243,9 +243,8 @@ def sales_analysis():
 
      fig = px.bar(
         top_departments,
-        x="Weekly_Sales",
-        y="Dept",
-        orientation="h",
+        x="Dept",
+        y="Weekly_Sales",
         color="Weekly_Sales",
         text_auto=".2s",
         title="Top 10 Performing Departments"

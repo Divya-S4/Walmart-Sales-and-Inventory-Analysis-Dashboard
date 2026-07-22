@@ -15,11 +15,7 @@ st.set_page_config(
 # ------------------------------------
 # Load Image
 # ------------------------------------
-from pathlib import Path
-from PIL import Image
-
-image_path = Path("Image") / "Walmart.png"
-image = Image.open(image_path)
+image = Image.open("Walmart.png")
 # ------------------------------------
 # Home Page
 # ------------------------------------

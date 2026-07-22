@@ -20,7 +20,7 @@ from PIL import Image
 
 image_path = Path("Image") / "Walmart.png"
 image = Image.open(image_path)
-)
+
 
 # ------------------------------------
 # Home Page

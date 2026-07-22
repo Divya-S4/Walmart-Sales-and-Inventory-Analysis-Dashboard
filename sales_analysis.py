@@ -279,6 +279,10 @@ def sales_analysis():
 # Bottom 10 Departments
 # ==========================================================
 
+    # ==========================================================
+# Bottom 10 Departments (Vertical Bar Chart)
+# ==========================================================
+
     with col2:
 
      bottom_departments = (
@@ -291,28 +295,30 @@ def sales_analysis():
 
      fig = px.bar(
         bottom_departments,
-        x="Weekly_Sales",
-        y="Dept",
-        orientation="h",
+        x="Dept",
+        y="Weekly_Sales",
         color="Weekly_Sales",
         text_auto=".2s",
         title="Bottom 10 Performing Departments"
     )
 
-     fig.update_traces(width=0.7)
+     fig.update_traces(
+        width=0.6,
+        textposition="outside"
+    )
 
      fig.update_layout(
-        height=400,
-        title_x=0.12,
-        yaxis=dict(categoryorder="total ascending"),
+        height=450,
+        title_x=0.15,
         coloraxis_showscale=False,
-        margin=dict(l=20, r=20, t=60, b=20)
+        margin=dict(l=20, r=20, t=60, b=20),
+        xaxis_title="Department",
+        yaxis_title="Weekly Sales",
+        xaxis=dict(type="category"),
+        yaxis_tickformat="~s"
     )
 
      st.plotly_chart(fig, use_container_width=True)
-
-    st.markdown("---")
-
   
 # ----------------------------------------------------------
 # Monthly Sales Trend

@@ -1,9 +1,9 @@
 # 🛒 Walmart Sales & Inventory Analysis Dashboard
 
-An interactive Business Intelligence dashboard built using **Python** and **Streamlit** to analyze Walmart sales and inventory data. The dashboard provides valuable insights into sales performance, inventory demand, department performance, and stock management through interactive visualizations and business recommendations.
+Developed an interactive Walmart Sales & Inventory Analysis Dashboard using Python, Streamlit, Pandas, and Plotly. The application provides KPI tracking, sales performance analysis, inventory optimization, restocking recommendations, overstock risk identification, holiday inventory planning, and executive-level business insights through dynamic visualizations and filters.
 
 ---
-# Web Page Link : https://walmart-sales-and-inventory-analysis-dashboard-3jge8qstbcsw6jk.streamlit.app/
+**🌐 Web Page Link :** https://walmart-sales-and-inventory-analysis-dashboard-3jge8qstbcsw6jk.streamlit.app/
 
 ---
 ## 📌 Features

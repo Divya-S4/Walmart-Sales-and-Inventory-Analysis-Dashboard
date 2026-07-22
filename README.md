@@ -58,6 +58,10 @@ An interactive Business Intelligence dashboard built using **Python** and **Stre
 - Plotly Express
 - Plotly Graph Objects
 
+## Style 
+
+- HTML and CSS
+
 ---
 
 ## 📂 Project Structure

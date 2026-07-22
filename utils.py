@@ -1,13 +1,24 @@
 import pandas as pd
 import streamlit as st
+from pathlib import Path
 
 @st.cache_data
 def load_data():
 
-    # Load datasets
-    pd.read_csv("train.csv")
-    pd.read_csv("stores.csv")
-    pd.read_csv("features.csv")
+    BASE_DIR = Path(__file__).parent
+
+    train = pd.read_csv(BASE_DIR / "train.csv")
+    stores = pd.read_csv(BASE_DIR / "stores.csv")
+    features = pd.read_csv(BASE_DIR / "features.csv")
+
+    df = train.merge(stores, on="Store", how="left")
+    df = df.merge(features, on=["Store", "Date", "IsHoliday"], how="left")
+
+    df["Date"] = pd.to_datetime(df["Date"])
+    df["Year"] = df["Date"].dt.year.astype(str)
+    df["Month"] = df["Date"].dt.month_name()
+
+    return df
 
     # Convert dates
     train["Date"] = pd.to_datetime(train["Date"])

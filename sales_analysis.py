@@ -114,7 +114,7 @@ def sales_analysis():
     st.markdown(
         """
         <h2 style='text-align:center;'>
-            📈 Sales Overview
+            Sales Overview
         </h2>
         """,
         unsafe_allow_html=True
@@ -497,7 +497,7 @@ def sales_analysis():
     st.markdown(
     """
      <h2 style='text-align:center;'>
-        🌍 External Factors Affecting Sales
+        External Factors Affecting Sales
      </h2>
     """,
      unsafe_allow_html=True

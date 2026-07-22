@@ -156,9 +156,9 @@ def sales_analysis():
 # Top 10 Departments (Vertical Bar Chart)
 # ==========================================================
 
-with col1:
+    with col1:
 
-    top_departments = (
+     top_departments = (
         filtered.groupby("Dept")["Weekly_Sales"]
         .sum()
         .sort_values(ascending=False)
@@ -166,7 +166,7 @@ with col1:
         .reset_index()
     )
 
-    fig = px.bar(
+     fig = px.bar(
         top_departments,
         x="Dept",
         y="Weekly_Sales",
@@ -175,12 +175,12 @@ with col1:
         title="Top 10 Performing Departments"
     )
 
-    fig.update_traces(
+     fig.update_traces(
         width=0.6,
         textposition="outside"
     )
 
-    fig.update_layout(
+     fig.update_layout(
         height=450,
         title_x=0.15,
         coloraxis_showscale=False,
@@ -191,7 +191,7 @@ with col1:
         yaxis_tickformat="~s"
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+     st.plotly_chart(fig, use_container_width=True)
 
     # -----------------------------
     # Store Type Sales

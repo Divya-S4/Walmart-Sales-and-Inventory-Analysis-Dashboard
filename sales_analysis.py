@@ -27,7 +27,7 @@ def sales_analysis():
     # SIDEBAR FILTERS
     # ==========================================================
 
-    st.sidebar.header("📌 Filter Options")
+    st.sidebar.header("Filters")
     st.sidebar.markdown("---")
 
     years = sorted(df["Year"].unique())
@@ -141,7 +141,7 @@ def sales_analysis():
     st.markdown(
         """
         <h2 style='text-align:center;'>
-            🏬 Store Performance
+            Store Performance
         </h2>
         """,
         unsafe_allow_html=True
@@ -231,7 +231,7 @@ def sales_analysis():
     st.markdown(
      """
      <h2 style='text-align:center;'>
-        📦 Department Performance
+        Department Performance
      </h2>
     """,
     unsafe_allow_html=True
@@ -276,10 +276,6 @@ def sales_analysis():
      st.plotly_chart(fig, use_container_width=True)
 
 # ==========================================================
-# Bottom 10 Departments
-# ==========================================================
-
-    # ==========================================================
 # Bottom 10 Departments (Vertical Bar Chart)
 # ==========================================================
 
@@ -416,7 +412,7 @@ def sales_analysis():
     st.markdown(
     """
      <h2 style='text-align:center;'>
-        🎄 Holiday Sales Analysis
+        Holiday Sales Analysis
      </h2>
     """,
      unsafe_allow_html=True

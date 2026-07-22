@@ -33,7 +33,7 @@ def home():
 
         st.write(
             "Your one-stop platform for exploring Walmart sales performance, "
-            "identifying business trends, and forecasting future sales."
+            "identifying business trends, and Inventory Stocks Analysis."
         )
 
         st.markdown("---")

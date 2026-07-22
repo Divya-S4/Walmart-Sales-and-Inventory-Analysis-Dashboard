@@ -5,9 +5,9 @@ import streamlit as st
 def load_data():
 
     # Load datasets
-    train = pd.read_csv("data/train.csv")
-    stores = pd.read_csv("data/stores.csv")
-    features = pd.read_csv("data/features.csv")
+    pd.read_csv("train.csv")
+    pd.read_csv("stores.csv")
+    pd.read_csv("features.csv")
 
     # Convert dates
     train["Date"] = pd.to_datetime(train["Date"])

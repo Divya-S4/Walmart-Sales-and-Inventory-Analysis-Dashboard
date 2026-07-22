@@ -152,33 +152,46 @@ def sales_analysis():
     # -----------------------------
     # Top 10 Stores
     # -----------------------------
-    with col1:
+    # ==========================================================
+# Top 10 Departments (Vertical Bar Chart)
+# ==========================================================
 
-        top_stores = (
-            filtered.groupby("Store")["Weekly_Sales"]
-            .sum()
-            .sort_values(ascending=False)
-            .head(10)
-            .reset_index()
-        )
+with col1:
 
-        fig = px.bar(
-            top_stores,
-            x="Weekly_Sales",
-            y="Store",
-            orientation="h",
-            color="Weekly_Sales",
-            text_auto=".1s",
-            title="Top 10 Performing Stores"
-        )
+    top_departments = (
+        filtered.groupby("Dept")["Weekly_Sales"]
+        .sum()
+        .sort_values(ascending=False)
+        .head(10)
+        .reset_index()
+    )
 
-        fig.update_layout(
-            height=450,   # Increase chart height
-            yaxis=dict(categoryorder="total ascending"),
-            title_x=0.15
-        )
+    fig = px.bar(
+        top_departments,
+        x="Dept",
+        y="Weekly_Sales",
+        color="Weekly_Sales",
+        text_auto=".2s",
+        title="Top 10 Performing Departments"
+    )
 
-        st.plotly_chart(fig, use_container_width=True)
+    fig.update_traces(
+        width=0.6,
+        textposition="outside"
+    )
+
+    fig.update_layout(
+        height=450,
+        title_x=0.15,
+        coloraxis_showscale=False,
+        margin=dict(l=20, r=20, t=60, b=20),
+        xaxis_title="Department",
+        yaxis_title="Weekly Sales",
+        xaxis=dict(type="category"),
+        yaxis_tickformat="~s"
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
 
     # -----------------------------
     # Store Type Sales

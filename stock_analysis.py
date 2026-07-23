@@ -485,7 +485,7 @@ Holiday Stock Planning
 
      holiday_sales = (
         filtered.groupby("IsHoliday")["Weekly_Sales"]
-        .sum()
+        .mean()
         .reset_index()
     )
 
@@ -532,7 +532,7 @@ Holiday Stock Planning
      nonholiday_total = holiday_sales.loc[
         holiday_sales["IsHoliday"] == "Non-Holiday",
         "Weekly_Sales"
-    ].sum()
+    ].mean()
 
      if holiday_total > nonholiday_total:
         peak_period = "Holiday"
